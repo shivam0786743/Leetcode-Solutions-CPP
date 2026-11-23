@@ -6,7 +6,7 @@ int sum =0;
     int minSubArrayLen(int target, vector<int>& nums) {
        
         for(int right = 0; right<nums.size();right++){
-            sum = sum + nums[right];
+             sum += nums[right];
             while (sum >= target ){
                 mini = min(mini, right-left+1);                
                 sum-=nums[left];            
